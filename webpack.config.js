@@ -10,8 +10,17 @@ const webpackConfig = {
     rules: [
       {
         test: /\.js$/, use: 'babel-loader'
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
       }
-    ]
+    ],
   },
   devServer: {
     contentBase: './dist'

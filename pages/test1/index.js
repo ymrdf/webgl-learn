@@ -72,11 +72,20 @@ const setupShaders = () => {
 function setupBuffers() {
   triangleVertexBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBuffer);
+
+
   const triangleVertices = [
     0.0, 0.5, 0.0, 255, 0, 0, 255,
     -0.5, -0.5, 0.0, 0, 250, 6, 255,
     0.5, -0.5, 0.0, 0, 0, 255, 255
   ];
+
+  // const triangleVertices = [
+  //   0.0, 0.0, 2.0, 0, 0, 0, 255,
+  //   1.0, -1.0, 0.0, 0, 0, 0, 255,
+  //   1.0, 1.0, 0.0, 0, 0, 0, 255
+  // ];
+
   const nbrOfVertices = 3;
 
   const vertexSizeInBytes = 3 * Float32Array.BYTES_PER_ELEMENT + 4 * Uint8Array.BYTES_PER_ELEMENT;
